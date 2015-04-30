@@ -1,28 +1,17 @@
-== README
+== Sam Altman Quotes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sam Altman's blog 'The days are long but the decades are short' was great.
+If you haven't read it yet, you should check it out here: http://blog.samaltman.com/the-days-are-long-but-the-decades-are-short .
 
-Things you may want to cover:
+It contains a lot of advice that I think is really important to read again & again.
 
-* Ruby version
+To help aid this I created this quick Rails app to Webhook one of the 32 learnings to a Slack channel, with the idea being that you'd run the Rake task daily.
 
-* System dependencies
+1. Create a Webhook integration in Slack (https://api.slack.com/incoming-webhooks)
+2. Deploy the Rails app somewhere. Cloud 66 or Heroku make this super easy.
+3. Set the `SLACK_WEBHOOK_URL` environment variable.
+4. Run the refresh rake task to seed the DB. `rake quote:refresh`
+5. Run the `rake quote:send_daily_quote` to send a quote to you Slack channel defined in the integration.
 
-* Configuration
+We've set the CRON job to run daily at 9:30am.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
