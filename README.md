@@ -15,3 +15,5 @@ To help aid this I created this quick Rails app to Webhook one of the 32 learnin
 
 We've set the CRON job to run daily at 9:30am.
 
+If it all works well you should be greeted with a quote in your Slack channel.
+![Screenshot](http://imgur.com/FWbtnRv)
